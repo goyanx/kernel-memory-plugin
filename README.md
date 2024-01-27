@@ -15,6 +15,7 @@ To learn more about using this starter, see the Semantic Kernel documentation th
 - Install the recommended extensions
   - [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
   - [Semantic Kernel Tools](https://marketplace.visualstudio.com/items?itemName=ms-semantic-kernel.semantic-kernel)
+- [Kernel Memory](https://github.com/microsoft/kernel-memory) - run the service in service/Service
 
 ## Configuring the starter
 
