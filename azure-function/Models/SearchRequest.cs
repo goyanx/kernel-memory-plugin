@@ -15,7 +15,7 @@ public class SearchRequest
     public List<Dictionary<string, List<string>>> Filters { get; set; }
 
     [JsonPropertyName("minRelevance")]
-    public int MinRelevance { get; set; }
+    public float MinRelevance { get; set; }
 
     [JsonPropertyName("limit")]
     public int Limit { get; set; }
