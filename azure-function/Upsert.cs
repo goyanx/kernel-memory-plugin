@@ -9,7 +9,7 @@ using Models;
 
 namespace SimpleTodo.Plugin;
 
-public class Upsert
+internal class Upsert
 {
     private static readonly HttpClient httpClient = new HttpClient();
 
@@ -25,17 +25,17 @@ public class Upsert
         var appSettings = AppSettings.LoadSettings();
 
         // Read the request body and deserialize it into SearchRequest
-        string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+        string requestBody = await new StreamReader(req.Body).ReadToEndAsync().ConfigureAwait(false);
         UpsertRequest upsertRequest = JsonSerializer.Deserialize<UpsertRequest>(requestBody)!;
 
         // Define the URL to make the HTTP POST request to
-        string url = "http://127.0.0.1:9001/upsert";
+        string url = "http://127.0.0.1:9003/upsert";
 
         // Prepare the JSON payload
         StringContent payload = new(JsonSerializer.Serialize(upsertRequest), Encoding.UTF8, "application/json");
 
         // Make the HTTP POST request
-        HttpResponseMessage response = await httpClient.PostAsync(url, payload);
+        HttpResponseMessage response = await httpClient.PostAsync(url, payload).ConfigureAwait(false);
 
         // Prepare the response object
         var httpResponse = req.CreateResponse(HttpStatusCode.OK);
@@ -44,7 +44,7 @@ public class Upsert
         if (response.IsSuccessStatusCode)
         {
             // Read and return the response body as string
-            string responseBody = await response.Content.ReadAsStringAsync();
+            string responseBody = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
 
             UpsertResponse upsertResponse = JsonSerializer.Deserialize<UpsertResponse>(responseBody)!;
 
