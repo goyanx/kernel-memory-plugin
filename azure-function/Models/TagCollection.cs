@@ -3,7 +3,7 @@ using System.Collections;
 namespace Models;
 
 // JSON serializable alternative to NameValueCollection
-public class TagCollection : IDictionary<string, List<string?>>
+internal class TagCollection : IDictionary<string, List<string?>>
 {
     private readonly IDictionary<string, List<string?>> _data = new Dictionary<string, List<string?>>(StringComparer.OrdinalIgnoreCase);
 

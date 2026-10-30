@@ -7,7 +7,7 @@ namespace Models;
 /// <summary>
 /// Provides the base exception from which all Kernel Memory exceptions derive.
 /// </summary>
-public class KernelMemoryException : Exception
+internal class KernelMemoryException : Exception
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="KernelMemoryException"/> class with a default message.

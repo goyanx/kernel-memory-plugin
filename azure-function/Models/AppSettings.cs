@@ -8,7 +8,7 @@ namespace Models;
 
 #pragma warning disable CA1724
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-public class AppSettings
+internal class AppSettings
 {
     public const string DefaultConfigFile = "appsettings.json";
 

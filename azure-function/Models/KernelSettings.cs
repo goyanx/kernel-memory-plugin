@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 namespace Models;
 
 #pragma warning disable CA1812
-public class KernelSettings
+internal class KernelSettings
 {
     public string ServiceType { get; set; } = string.Empty;
     public string ServiceId { get; set; } = string.Empty;

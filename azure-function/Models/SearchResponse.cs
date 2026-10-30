@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace Models
 {
-    public class SearchResponse
+    internal class SearchResponse
     {
         [JsonPropertyName("query")]
         public string Query { get; set; }
@@ -16,7 +16,7 @@ namespace Models
         public List<ResultItem> Results { get; set; }
     }
 
-    public class ResultItem
+    internal class ResultItem
     {
         [JsonPropertyName("link")]
         public string Link { get; set; }
@@ -43,7 +43,7 @@ namespace Models
         public List<Partition> Partitions { get; set; }
     }
 
-    public class Partition
+    internal class Partition
     {
         [JsonPropertyName("text")]
         public string Text { get; set; }

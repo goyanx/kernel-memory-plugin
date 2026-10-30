@@ -11,7 +11,7 @@ using Microsoft.SemanticKernel.Text;
 
 namespace AIPlugins.AzureFunctions.Extensions;
 
-public static class KernelExtensions
+internal static class KernelExtensions
 {
     public static IDictionary<string, ISKFunction> ImportPromptsFromDirectory(
         this IKernel kernel, string pluginName, string promptDirectory)

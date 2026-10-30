@@ -8,7 +8,8 @@ using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
 
 namespace AIPlugins.AzureFunctions.Extensions;
-public interface IAIPluginRunner
+
+internal interface IAIPluginRunner
 {
     public Task<HttpResponseData> RunAIPluginOperationAsync(HttpRequestData req, string operationId);
 }

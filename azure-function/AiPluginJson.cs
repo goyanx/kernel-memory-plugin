@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Models;
 
-public class AIPluginJson
+internal class AIPluginJson
 {
     [Function("GetAIPluginJson")]
     public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = ".well-known/ai-plugin.json")] HttpRequestData req)

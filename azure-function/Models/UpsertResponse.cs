@@ -2,7 +2,7 @@ using System.Text.Json.Serialization;
 
 namespace Models;
 
-public class UpsertResponse
+internal class UpsertResponse
 {
     [JsonPropertyName("index")]
     [JsonPropertyOrder(0)]

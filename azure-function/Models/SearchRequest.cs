@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace Models;
 
-public class SearchRequest
+internal class SearchRequest
 {
     [JsonPropertyName("index")]
     public string Index { get; set; }

@@ -6,7 +6,7 @@ namespace Models;
 #pragma warning disable CA1056
 #pragma warning disable CA1034
 
-public class AIPluginSettings
+internal class AIPluginSettings
 {
     [JsonPropertyName("schema_version")]
     public string SchemaVersion { get; set; } = "v1";
@@ -39,7 +39,7 @@ public class AIPluginSettings
     public string LegalInfoUrl { get; set; } = string.Empty;
 
 
-    public class AuthModel
+    internal class AuthModel
     {
         [JsonPropertyName("type")]
         public string Type { get; set; } = string.Empty;
@@ -48,7 +48,7 @@ public class AIPluginSettings
         public string AuthorizationType { get; set; } = string.Empty;
     }
 
-    public class ApiModel
+    internal class ApiModel
     {
         [JsonPropertyName("type")]
         public string Type { get; set; } = "openapi";

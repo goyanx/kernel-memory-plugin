@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace Models;
 
 
-public class TagCollectionJsonConverter : JsonConverter<TagCollection>
+internal class TagCollectionJsonConverter : JsonConverter<TagCollection>
 {
     public override TagCollection Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
@@ -44,7 +44,7 @@ public class TagCollectionJsonConverter : JsonConverter<TagCollection>
         writer.WriteEndObject();
     }
 }
-public class UpsertRequest
+internal class UpsertRequest
 {
     [JsonPropertyName("index")]
     [JsonPropertyOrder(0)]
